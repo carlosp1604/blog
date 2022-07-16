@@ -10,6 +10,8 @@
     "db:up": "docker-compose up -d"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.21",
+    "mysql": "^2.18.1",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
