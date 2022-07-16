@@ -10,7 +10,9 @@
     "db:up": "docker-compose up -d"
   },
   "dependencies": {
+    "@types/knex": "^0.16.1",
     "@types/mysql": "^2.15.21",
+    "knex": "^2.1.0",
     "mysql": "^2.18.1",
     "next": "12.2.2",
     "react": "18.2.0",
