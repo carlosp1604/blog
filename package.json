@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "db:up": "docker-compose up -d",
-    "db:make-migration": "TS_NODE_COMPILER_OPTIONS='{ \"isolatedModules\": false, \"module\": \"commonjs\" }' knex migrate:make -x ts"
+    "db:make-migration": "TS_NODE_COMPILER_OPTIONS='{ \"isolatedModules\": false, \"module\": \"commonjs\" }' knex migrate:make -x ts",
+    "db:migrate": "TS_NODE_COMPILER_OPTIONS='{ \"isolatedModules\": false, \"module\": \"commonjs\" }' knex migrate:latest",
+    "db:rollback": "TS_NODE_COMPILER_OPTIONS='{ \"isolatedModules\": false, \"module\": \"commonjs\" }' knex migrate:rollback",
+    "db:rollback-last": "TS_NODE_COMPILER_OPTIONS='{ \"isolatedModules\": false, \"module\": \"commonjs\" }' knex migrate:down",
+    "db:reset": "docker-compose down && sudo rm -r ./docker && yarn db:up && sleep 10 && yarn db:migrate"
   },
   "dependencies": {
     "@types/knex": "^0.16.1",
