@@ -8,6 +8,10 @@ export async function up(knex: Knex): Promise<void> {
         table.string('about_me', 2048)
         table.string('banner_hex_color', 7).notNullable()
         table.string('image_url').nullable()
+        table.timestamp('created_at')
+            .defaultTo(knex.raw('CURRENT_TIMESTAMP'))
+        table.timestamp('updated_at')
+            .defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))
     })
 }
 

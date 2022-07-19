@@ -8,6 +8,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('description', 512).notNullable()
         table.string('image_url').nullable()
         table.string('repository', 256).nullable()
+        table.index('slug')
     })
 }
 

@@ -5,7 +5,7 @@ export class Post {
     private readonly title: string
     private readonly imageUrl: string
     private readonly readTime: number
-    private readonly publishedAt: string
+    private readonly publishedAt: Date
     private readonly lastUpdate: Date
     private readonly courseId: string | null
     private readonly authorId: string
@@ -17,7 +17,7 @@ export class Post {
         title: string,
         imageUrl: string,
         readTime: number,
-        publishedAt: string,
+        publishedAt: Date,
         lastUpdate: Date,
         courseId: string | null,
         authorId: string
